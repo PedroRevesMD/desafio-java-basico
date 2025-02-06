@@ -23,5 +23,13 @@ public class ContaTerminal {
             System.out.println("Por favor, Digite o numero do Saldo Inicial:");
             saldoConta = scanner.nextDouble();
         }
+
+        String mensagemBoasVindas = criarMensagemBoasVindas(nomeCliente, numeroConta, numeroAgencia, saldoConta);
+        System.out.println(mensagemBoasVindas);
+    }
+
+    static String criarMensagemBoasVindas(String nomeCliente, int numeroConta, String numeroAgencia, double saldoConta) {
+        String mensagemFinal = "Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + numeroAgencia + ", conta " + numeroConta + " e seu saldo " + saldoConta + "já está disponível para saque.";
+        return mensagemFinal;
     }
 }
