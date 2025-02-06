@@ -9,7 +9,7 @@ public class ContaTerminal {
         double saldoConta;
 
         System.out.println("Olá, Seja bem Vindo ao nosso banco!");
-        try (Scanner scanner = new Scanner(System.in).useLocale(Locale.forLanguageTag("pt-BR"))) {
+        try (Scanner scanner = new Scanner(System.in).useLocale(Locale.US)) {
             
             System.out.println("Por favor, Digite o seu Nome:");
             nomeCliente = scanner.nextLine();
@@ -29,7 +29,7 @@ public class ContaTerminal {
     }
 
     static String criarMensagemBoasVindas(String nomeCliente, int numeroConta, String numeroAgencia, double saldoConta) {
-        String mensagemFinal = "Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + numeroAgencia + ", conta " + numeroConta + " e seu saldo " + saldoConta + "já está disponível para saque.";
+        String mensagemFinal = "Olá " + nomeCliente + ", Obrigado por criar uma conta em nosso banco!, sua agência é " + numeroAgencia + ", conta " + numeroConta + " e seu saldo de " + saldoConta + " R$ já está disponível para saque.";
         return mensagemFinal;
     }
 }
